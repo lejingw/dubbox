@@ -15,6 +15,7 @@ start)
   java -Xms2G -Xmx2G -classpath ./target/classes:./target/dubbo-demo2-consumer-2.8.4/lib/*  -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc1.log -Dwrite.statistics=true com.alibaba.dubbo.demo2.consumer.DubboTest start $2 $3 >>benchmark$2.log
   ;;
 clean)
+  rm -rf target
   rm -rf benchmark*.log
   rm -rf gc1.log
   ;;
